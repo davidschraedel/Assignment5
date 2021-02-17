@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model  IQueryable<Book>
+
+<div class="text-center">
+    <br />
+    <h1 class="display-4 shadow p-3 mb-5 rounded d-inline-flex bg-light">The Online Bookstore</h1>
+    <div>
+    <br />
+        <table class="table table-bordered bg-light shadow">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Publisher</th>
+                    <th scope="col">Classification/Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">ISBN</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                <tr>
+                    <td scope="row">@x.Title</td>
+                    <td scope="row">@x.AuthorGivenName @x.AuthorSurname</td>
+                    <td scope="row">@x.Publisher</td>
+                    <td scope="row">@x.Classification, @x.Category</td>
+                    <td scope="row">$@x.Price</td>
+                    <td scope="row">@x.ISBN</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
