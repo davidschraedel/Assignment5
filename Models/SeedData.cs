@@ -24,7 +24,7 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "Les Miserables",
-                        AuthorGivenName = "Victor",
+                        AuthorFirstName = "Victor",
                         AuthorSurname = "Hugo",
                         Publisher = "Signet",
                         ISBN = "978-0451419439",
@@ -35,7 +35,8 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "Team of Rivals",
-                        AuthorGivenName = "Doris Kearns",
+                        AuthorFirstName = "Doris",
+                        AuthorMiddleName = "Kearns",
                         AuthorSurname = "Goodwin",
                         Publisher = "Simon & Schuster",
                         ISBN = "978-0743270755",
@@ -46,7 +47,7 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "The Snowball",
-                        AuthorGivenName = "Alice",
+                        AuthorFirstName = "Alice",
                         AuthorSurname = "Schroeder",
                         Publisher = "Bantam",
                         ISBN = "978-0553384611",
@@ -57,7 +58,8 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "American Ulysses",
-                        AuthorGivenName = "Ronald C.",
+                        AuthorFirstName = "Ronald",
+                        AuthorMiddleName = "C.",
                         AuthorSurname = "White",
                         Publisher = "Random House",
                         ISBN = "978-0812981254",
@@ -68,7 +70,7 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "Unbroken",
-                        AuthorGivenName = "Laura",
+                        AuthorFirstName = "Laura",
                         AuthorSurname = "Hillenbrand",
                         Publisher = "Random House",
                         ISBN = "978-0812974492",
@@ -79,7 +81,7 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "The Great Train Robbery",
-                        AuthorGivenName = "Michael",
+                        AuthorFirstName = "Michael",
                         AuthorSurname = "Chrichton",
                         Publisher = "Vintage",
                         ISBN = "978-0804171281",
@@ -90,7 +92,7 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "Deep Work",
-                        AuthorGivenName = "Cal",
+                        AuthorFirstName = "Cal",
                         AuthorSurname = "Newport",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455586691",
@@ -101,7 +103,7 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "It\'s Your Ship",
-                        AuthorGivenName = "Michael",
+                        AuthorFirstName = "Michael",
                         AuthorSurname = "Abrashoff",
                         Publisher = "Grand Central Publishing",
                         ISBN = "978-1455523023",
@@ -112,7 +114,7 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "The Virgin Way",
-                        AuthorGivenName = "Richard",
+                        AuthorFirstName = "Richard",
                         AuthorSurname = "Branson",
                         Publisher = "Portfolio",
                         ISBN = "978-1591847984",
@@ -123,7 +125,7 @@ namespace OnlineBookstore.Models
                     new Book
                     {
                         Title = "Sycamore Row",
-                        AuthorGivenName = "John",
+                        AuthorFirstName = "John",
                         AuthorSurname = "Grisham",
                         Publisher = "Bantam",
                         ISBN = "978-0553393613",

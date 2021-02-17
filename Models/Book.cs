@@ -13,7 +13,8 @@ namespace OnlineBookstore.Models
         [Required]
         public string Title { get; set; }
         [Required]
-        public string AuthorGivenName { get; set; }
+        public string AuthorFirstName { get; set; }
+        public string AuthorMiddleName { get; set; }
         [Required]
         public string AuthorSurname { get; set; }
         [Required]
