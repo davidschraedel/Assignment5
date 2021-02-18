@@ -62,6 +62,7 @@ namespace OnlineBookstore
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
+            //populate the database, if not populated already
             SeedData.EnsurePopulated(app);
         }
     }

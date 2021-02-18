@@ -17,11 +17,13 @@ namespace OnlineBookstore.Controllers
         public HomeController(ILogger<HomeController> logger, IBookRepository repository)
         {
             _logger = logger;
+            //initialize controller _repository property as the Book repository
             _repository = repository;
         }
 
         public IActionResult Index()
         {
+            //pass book data to view
             return View(_repository.Books);
         }
 
