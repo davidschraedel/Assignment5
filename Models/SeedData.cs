@@ -20,6 +20,7 @@ namespace OnlineBookstore.Models
             }
             if (!context.Books.Any())
             {
+                //Seed the database with this prepopulation data
                 context.Books.AddRange(
                     new Book
                     {

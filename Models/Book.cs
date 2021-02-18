@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineBookstore.Models
 {
+    //book class object to store in database
     public class Book
     {
         [Key]
