@@ -61,8 +61,6 @@ namespace OnlineBookstore
                     "pagination",
                     "Books/P{page}",
                     new { Controller = "Home", action = "Index" });
-                //name: "default",
-                //pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapDefaultControllerRoute();
             });
 

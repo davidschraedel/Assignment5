@@ -31,6 +31,7 @@ namespace OnlineBookstore.Models
         [RegularExpression(@"^\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$", ErrorMessage = "Price must be in a correct currency format: (e.g. $25.95)")]
         
         public decimal Price { get; set; }
+        //number of pages in book
         [Required]
         public int PageCount { get; set; }
     }

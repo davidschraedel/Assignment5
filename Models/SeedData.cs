@@ -144,6 +144,7 @@ namespace OnlineBookstore.Models
                         Price = 15.03m,
                         PageCount = 642
                     },
+                    //3 new books
                     new Book
                     {
                         Title = "Quiet: The Power of Introverts in a World That Can't Stop Talking",
