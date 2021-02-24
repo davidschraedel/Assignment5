@@ -31,7 +31,8 @@ namespace OnlineBookstore.Models
                         ISBN = "978-0451419439",
                         Classification = "Fiction",
                         Category = "Classic",
-                        Price = 9.95m
+                        Price = 9.95m,
+                        PageCount = 1488
                     },
                     new Book
                     {
@@ -43,7 +44,8 @@ namespace OnlineBookstore.Models
                         ISBN = "978-0743270755",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 14.58m
+                        Price = 14.58m,
+                        PageCount = 944
                     },
                     new Book
                     {
@@ -54,7 +56,8 @@ namespace OnlineBookstore.Models
                         ISBN = "978-0553384611",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 21.54m
+                        Price = 21.54m,
+                        PageCount = 832
                     },
                     new Book
                     {
@@ -66,7 +69,8 @@ namespace OnlineBookstore.Models
                         ISBN = "978-0812981254",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 11.61m
+                        Price = 11.61m,
+                        PageCount = 864
                     },
                     new Book
                     {
@@ -77,7 +81,8 @@ namespace OnlineBookstore.Models
                         ISBN = "978-0812974492",
                         Classification = "Non-Fiction",
                         Category = "Historical",
-                        Price = 13.33m
+                        Price = 13.33m,
+                        PageCount = 528
                     },
                     new Book
                     {
@@ -88,7 +93,8 @@ namespace OnlineBookstore.Models
                         ISBN = "978-0804171281",
                         Classification = "Fiction",
                         Category = "Historical Fiction",
-                        Price = 15.95m
+                        Price = 15.95m,
+                        PageCount = 288
                     },
                     new Book
                     {
@@ -99,7 +105,8 @@ namespace OnlineBookstore.Models
                         ISBN = "978-1455586691",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 14.99m
+                        Price = 14.99m,
+                        PageCount = 304
                     },
                     new Book
                     {
@@ -110,7 +117,8 @@ namespace OnlineBookstore.Models
                         ISBN = "978-1455523023",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 21.66m
+                        Price = 21.66m,
+                        PageCount = 240
                     },
                     new Book
                     {
@@ -121,7 +129,8 @@ namespace OnlineBookstore.Models
                         ISBN = "978-1591847984",
                         Classification = "Non-Fiction",
                         Category = "Business",
-                        Price = 29.16m
+                        Price = 29.16m,
+                        PageCount = 400
                     },
                     new Book
                     {
@@ -132,7 +141,45 @@ namespace OnlineBookstore.Models
                         ISBN = "978-0553393613",
                         Classification = "Fiction",
                         Category = "Thrillers",
-                        Price = 15.03m
+                        Price = 15.03m,
+                        PageCount = 642
+                    },
+                    new Book
+                    {
+                        Title = "Quiet: The Power of Introverts in a World That Can't Stop Talking",
+                        AuthorFirstName = "Susan",
+                        AuthorSurname = "Cain",
+                        Publisher = "Crown",
+                        ISBN = "978-0141029191",
+                        Classification = "Non-Fiction",
+                        Category = "Self-Help",
+                        Price = 7.89m,
+                        PageCount = 333
+                    },
+                    new Book
+                    {
+                        Title = "The Lord of the Rings, The Fellowship of the Ring",
+                        AuthorFirstName = "J.",
+                        AuthorMiddleName = "R.R.",
+                        AuthorSurname = "Tolkien",
+                        Publisher = "Allen & Unwin",
+                        ISBN = "978-0007269709",
+                        Classification = "Fiction",
+                        Category = "Fantasy",
+                        Price = 8.49m,
+                        PageCount = 423
+                    },
+                    new Book
+                    {
+                        Title = "Mooses Come Walking",
+                        AuthorFirstName = "Arlo",
+                        AuthorSurname = "Guthrie",
+                        Publisher = "Chronicle Books",
+                        ISBN = "978-0811810517",
+                        Classification = "Fiction",
+                        Category = "Children's Literature",
+                        Price = 9.36m,
+                        PageCount = 32
                     }
                 );
 

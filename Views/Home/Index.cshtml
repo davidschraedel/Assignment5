@@ -2,14 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model  IQueryable<Book>
+@model  BookListViewModel
 
 <div class="text-center">
     <br />
-    <h1 class="display-4 shadow p-3 mb-5 rounded d-inline-flex bg-light">The Online Bookstore</h1>
+        <h1 class="display-4 shadow p-3 mb-5 col-6 justify-content-center rounded-pill d-inline-flex bg-light border-bottom border-right border-secondary">
+            <attr title="Your Favorite Books">The Online Bookstore</attr>
+        </h1>
+    
     <div>
-    <br />
+        <br />
         <table class="table table-bordered bg-light shadow">
+            <caption class="table table-bordered bg-light align-content-center">
+                <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-dark"
+                     page-class-selected="btn-dark" class="btn-group pull-right m-1 col-4 align-content-center "></div>
+            </caption>
             <thead>
                 <tr>
                     <th scope="col">Title</th>
@@ -17,23 +24,28 @@
                     <th scope="col">Publisher</th>
                     <th scope="col">Classification/Category</th>
                     <th scope="col">Price</th>
+                    <th scope="col">Page Count</th>
                     <th scope="col">ISBN</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- display each book in the database, each on a separate row.-->
-                @foreach (var x in Model)
+                @foreach (var x in Model.Books)
                 {
-                <tr>
-                    <td scope="row">@x.Title</td>
-                    <td scope="row">@x.AuthorFirstName @x.AuthorMiddleName @x.AuthorSurname</td>
-                    <td scope="row">@x.Publisher</td>
-                    <td scope="row">@x.Classification, @x.Category</td>
-                    <td scope="row">$@x.Price</td>
-                    <td scope="row">@x.ISBN</td>
-                </tr>
+                    <tr>
+                        <td scope="row" class="font-italic">@x.Title</td>
+                        <td scope="row">@x.AuthorFirstName @x.AuthorMiddleName @x.AuthorSurname</td>
+                        <td scope="row">@x.Publisher</td>
+                        <td scope="row">@x.Classification, @x.Category</td>
+                        <td scope="row">$@x.Price</td>
+                        <td scope="row">@x.PageCount</td>
+                        <td scope="row">@x.ISBN</td>
+                    </tr>
                 }
             </tbody>
         </table>
+        <br /><br />
+        <div class="align-content-center btn-lg invisible">What's Good</div>
+
     </div>
 </div>
