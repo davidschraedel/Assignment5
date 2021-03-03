@@ -1,0 +1,11 @@
+﻿@model Book
+
+<tr>
+    <td scope="row" class="font-italic">@Model.Title</td>
+    <td scope="row">@Model.AuthorFirstName @Model.AuthorMiddleName @Model.AuthorSurname</td>
+    <td scope="row">@Model.Publisher</td>
+    <td scope="row">@Model.Classification, @Model.Category</td>
+    <td scope="row">$@Model.Price</td>
+    <td scope="row">@Model.PageCount</td>
+    <td scope="row">@Model.ISBN</td>
+</tr>

@@ -4,19 +4,15 @@
 
 @model  BookListViewModel
 
-<div class="text-center">
-    <br />
-        <h1 class="display-4 shadow p-3 mb-5 col-6 justify-content-center rounded-pill d-inline-flex bg-light border-bottom border-right border-secondary">
-            <attr title="Your Favorite Books">The Online Bookstore</attr>
-        </h1>
+<div class="text-center">     
     
     <div>
-        <br />
+        <!--table for book summaries-->
         <table class="table table-bordered bg-light shadow">
             <caption class="table table-bordered bg-light align-content-center">
                 <!--pagination navigation-->
                 <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-dark"
-                     page-class-selected="btn-dark" class="btn-group pull-right m-1 col-4 align-content-center "></div>
+                     page-class-selected="btn-dark" page-url-category="@Model.CurrentCategory" class="btn-group pull-right m-1 col-4 align-content-center "></div>
             </caption>
             <thead>
                 <tr>
@@ -33,21 +29,9 @@
                 <!-- display each book in the database, each on a separate row.-->
                 @foreach (var x in Model.Books)
                 {
-                    <tr>
-                        <td scope="row" class="font-italic">@x.Title</td>
-                        <td scope="row">@x.AuthorFirstName @x.AuthorMiddleName @x.AuthorSurname</td>
-                        <td scope="row">@x.Publisher</td>
-                        <td scope="row">@x.Classification, @x.Category</td>
-                        <td scope="row">$@x.Price</td>
-                        <td scope="row">@x.PageCount</td>
-                        <td scope="row">@x.ISBN</td>
-                    </tr>
+                    <partial name="BookSummary" model="x" />
                 }
             </tbody>
         </table>
-        <br /><br />
-        <!--invisible element-->
-        <div class="align-content-center btn-lg invisible">Eat Fresh Ice Cream from Wyoming</div>
-
     </div>
 </div>

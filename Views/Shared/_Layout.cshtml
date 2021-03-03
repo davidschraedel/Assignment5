@@ -18,23 +18,46 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                    
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+
+
+
+    <div class="container justify-content-center">
         <main role="main" class="pb-3">
-            @RenderBody()
+            <!--invisible element-->
+            <div class="align-content-center btn-lg invisible">Eat Fresh Ice Cream from Wyoming</div>
+            <!--Heading-->
+            
+            <h1 class="display-4 shadow p-3 mb-5 col-6 mx-auto justify-content-center text-center rounded-pill d-block bg-light border-bottom border-right border-secondary">
+                <attr title="Your Favorite Books">The Online Bookstore</attr>
+            </h1>
+            
+            <!--Body Content-->
+            <div class="container p-2 justify-content-center d-sm-inline-flex bg-dark">
+                <br />
+                <div class="col-9 p-2 float-lg-right flex-fill d-inline-flex">
+                    @RenderBody()
+                </div>
+                <div class="col-3 p-2 float-lg-left text-center">
+                    <vc:navigation-menu />
+                </div>
+            </div>
+
+            <br /><br />
         </main>
     </div>
+
 
     <footer class="border-top footer bg-light">
         <div class="container">
             &copy; 2021 - The Online Bookstore - David Schraedel
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
