@@ -9,7 +9,7 @@ namespace OnlineBookstore.Models
     {
         public List<CartLine> Lines { get; set; } = new List<CartLine>();
 
-        public void AddItem(Book bk, int qty)
+        public virtual void AddItem(Book bk, int qty)
         {
             CartLine line = Lines
                 .Where(p => p.Book.BookId == bk.BookId)
@@ -28,12 +28,12 @@ namespace OnlineBookstore.Models
             }
         }
 
-        public void RemoveLine(Book bk) =>
+        public virtual void RemoveLine(Book bk) =>
             Lines.RemoveAll(x => x.Book.BookId == bk.BookId);
 
-        public void Clear() => Lines.Clear();
+        public virtual void Clear() => Lines.Clear();
 
-        public decimal ComputeTotalSum() //Book Price * Quantity
+        public virtual decimal ComputeTotalSum() //Book Price * Quantity
         {
             decimal sum = 0;
             foreach (CartLine line in Lines)
