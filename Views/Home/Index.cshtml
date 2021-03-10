@@ -10,7 +10,7 @@
         <!--table for book summaries-->
         <table class="table table-bordered bg-light shadow">
             <caption class="table table-bordered bg-light align-content-center">
-                <!--pagination navigation-->
+                <!--book pagination navigation-->
                 <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-dark"
                      page-class-selected="btn-dark" page-url-category="@Model.CurrentCategory" class="btn-group pull-right m-1 col-4 align-content-center "></div>
             </caption>
@@ -23,6 +23,7 @@
                     <th scope="col">Price</th>
                     <th scope="col">Page Count</th>
                     <th scope="col">ISBN</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>

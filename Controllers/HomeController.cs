@@ -24,7 +24,7 @@ namespace OnlineBookstore.Controllers
             _repository = repository;
         }
 
-        public IActionResult Index(string category, int page = 1)
+        public IActionResult Index(string category, int pageNum = 1)
         {
             //pass book data to view
             return View(new BookListViewModel
@@ -32,12 +32,12 @@ namespace OnlineBookstore.Controllers
                 Books = _repository.Books
                 .Where(b => category == null || b.Category == category)
                 .OrderBy(b => b.BookId)
-                .Skip((page - 1) * PageSize)
+                .Skip((pageNum - 1) * PageSize)
                 .Take(PageSize)
                 ,
                 PagingInfo = new PagingInfo
                 {
-                    CurrentPage = page,
+                    CurrentPage = pageNum,
                     ItemsPerPage = PageSize,
                     TotalNumItems = category == null ? _repository.Books.Count() : _repository.Books.Where(x => x.Category == category).Count()
                 },

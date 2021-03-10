@@ -29,10 +29,15 @@ namespace OnlineBookstore
 
             services.AddDbContext<BookDbContext>(options =>
             {
-                options.UseSqlServer(Configuration["ConnectionStrings:BookConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:BookConnection"]);
             });
 
             services.AddScoped<IBookRepository, EFBookRepository>();
+
+            services.AddRazorPages();
+
+            services.AddDistributedMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +56,8 @@ namespace OnlineBookstore
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSession();
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -58,23 +65,27 @@ namespace OnlineBookstore
             app.UseEndpoints(endpoints =>
             {
                 
-                endpoints.MapControllerRoute("catpage",
-                    "{category}/{page:int}",
+                endpoints.MapControllerRoute("catpageNum",
+                    "{category}/{pageNum:int}",
                     new { Controller = "Home", action = "Index" });
 
-                endpoints.MapControllerRoute("page",
-                    "{page:int}",
+                endpoints.MapControllerRoute("pageNum",
+                    "{pageNum:int}",
                     new { Controller = "Home", action = "Index" });
 
                 endpoints.MapControllerRoute("category",
                     "{category}",
-                    new { Controller = "Home", action = "Index", page = 1 });
+                    new { Controller = "Home", action = "Index", pageNum = 1 });
                 
                 endpoints.MapControllerRoute("pagination",
-                    "Books/P{page:int}",
+                    "Books/P{pageNum:int}",
                     new { Controller = "Home", action = "Index" });
-                
+                endpoints.MapControllerRoute("home",
+                   "/",
+                   new { Controller = "Home", action = "Index", pageNum = 1 });
+
                 endpoints.MapDefaultControllerRoute();
+                endpoints.MapRazorPages();
             });
 
             //populate the database, if not populated already

@@ -11,7 +11,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">The Online Bookstore</a>
+                <a class="navbar-brand" asp-area="" asp-route-category="" asp-route-pageNum="1" asp-controller="Home" asp-action="Index">The Online Bookstore</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,12 +37,13 @@
             </h1>
             
             <!--Body Content-->
-            <div class="container p-2 justify-content-center d-sm-inline-flex bg-dark shadow rounded">
+            <div class=" justify-content-center d-sm-inline-flex bg-dark shadow rounded">
                 <br />
-                <div class="col-9 p-2 float-lg-right flex-fill d-inline-flex">
+                <div class="col-10 p-2 float-lg-left flex-fill">
                     @RenderBody()
                 </div>
-                <div class="col-3 p-2 float-lg-left text-center">
+                <!--Category navigation-->
+                <div class="col-2 p-2 float-lg-right flex-fill text-center">
                     <vc:navigation-menu />
                 </div>
             </div>
